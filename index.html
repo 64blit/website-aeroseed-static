@@ -16,33 +16,50 @@
         <video autoplay muted loop id="bg-video" class="overflow-hidden position-fixed" width="100%" autoplay="autoplay" loop muted>
             <source src="assets/aeroseed.mp4" type="video/mp4">
         </video>
-        <div class="bg-dark me-auto" id="top-left-logo" style="border-bottom-right-radius: 50px;"></div>
         <div class="d-flex flex-wrap justify-content-end me-lg-5 mt-1 " id="top-bar-container">
             <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">HOME</div>
             <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">ABOUT</div>
             <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">PARTNERS</div>
             <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">CONTACT</div>
         </div>
+        <div class="me-auto" id="top-left-logo"></div>
         <div class="align-items-center d-flex justify-content-center" id="main-page-container">
-            <div id="body-wrapper">
-                <div class="align-content-center align-items-center d-flex flex-column justify-content-center m-1 p-3" id="home-text-wrapper">
-                    <div class="home-text text-center text-light text-nowrap" style="letter-spacing: 10px; text-indent: 10px;">THE WORLDS</div>
-                    <div class="fw-bolder home-text text-center text-light" style="letter-spacing: 1px; text-indent: 17px; font-style: italic; height: 7rem; text-align: center; font-size: 5rem; margin-top: -2rem; margin-bottom: -1rem;">FIRST</div>
-                    <div class="home-text text-center text-light" style="letter-spacing: 2px; text-indent: -24px; font-size: 2rem;">CONTROLLABLE</div>
-                    <div class="home-text text-center text-light" style="text-indent: -1px; letter-spacing: 6px; font-size: 2.5rem; font-weight: bolder;">MONOCOPTER</div>
+            <div id="body-wrapper" class="d-flex justify-content-center">
+                <div class="align-content-center align-items-center d-flex d-none flex-column justify-content-center m-1 p-3" id="home-text-wrapper">
+                    <div class="home-text lead text-center text-nowrap text-white" style="letter-spacing: 10px; text-indent: 10px;">THE WORLD'S</div>
+                    <div class="fw-bolder home-text text-center text-white" style="letter-spacing: 8px; text-indent: -4px; height: 7rem; text-align: center; font-size: 5rem; margin-top: -2rem; margin-bottom: -1rem; font-style: italic;">FIRST</div>
+                    <div class="home-text lead text-center text-white" style="letter-spacing: 2px; text-indent: -24px; font-size: 2rem;">CONTROLLABLE</div>
+                    <div class="home-text text-center text-white" style="text-indent: -1px; letter-spacing: 6px; font-size: 2.5rem; font-weight: bolder;">MONOCOPTER</div>
+                </div>
+                <div class="align-content-center align-items-center d-flex flex-column justify-content-center m-1 p-3" id="about-wrapper">
+                    <div class="text-center text-white">MONOCOPTER</div>
+                </div>
+                <div class="align-content-around d-flex d-none flex-wrap" id="partners-wrapper">
+                    <div class="partner-logo-parent">
+                        <div class="octagon">
+                            <div class="lockheed-martin-logo m-1 partners-logo"></div>
+                        </div>
+                    </div>
+                    <div class="partner-logo-parent">
+                        <div class="octagon">
+                            <div class="csulb-logo m-1 partners-logo"></div>
+                        </div>
+                    </div>
+                    <div class="partner-logo-parent">
+                        <div class="octagon">
+                            <div class="m-1 partners-logo vorcat-logo"></div>
+                        </div>
+                    </div>
+                    <div class="partner-logo-parent">
+                        <div class="octagon">
+                            <div class="asterlabs-logo m-1 partners-logo"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Bootstrap core JavaScript
-    ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
         <footer id="footer-container">
-            <div class="d-flex flex-wrap justify-content-end me-lg-5 mt-1 ">
-                <div class="pg-empty-placeholder"></div>
-                <div class="pg-empty-placeholder"></div>
-                <div class="pg-empty-placeholder"></div>
-            </div>
-        </footer>
+</footer>
         <script src="assets/js/popper.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
