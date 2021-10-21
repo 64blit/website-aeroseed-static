@@ -14,6 +14,7 @@ function main() {
   const contact = document.getElementById("contact");
   const pages = [home, specs, about, partners, contact];
 
+  const navDropDownButton = document.getElementById("navDropdownButton");
   const homeNavButton = document.getElementById("homeNavButton");
   const homeMoreInfoButton = document.getElementById("homeLearnMoreButton");
   const specsNavButton = document.getElementById("specsNavButton");
@@ -24,13 +25,18 @@ function main() {
 
   let pageDict = {};
   pageDict[homeNavButton.id] = home;
-  pageDict[homeMoreInfoButton.id] = home;
+  pageDict[homeMoreInfoButton.id] = about;
   pageDict[specsNavButton.id] = specs;
   pageDict[aboutNavButton.id] = about;
   pageDict[partnersNavButton.id] = partners;
   pageDict[contactNavButton.id] = contact;
 
   function resetAll() {
+    console.log(navDropDownButton.ariaExpanded);
+    if (navDropDownButton.ariaExpanded === "true") {
+      navDropDownButton.click(); // close the nav drop down
+    }
+
     for (let index = 0; index < pages.length; index++) {
       const page = pages[index];
       page.classList.add("d-none"); // adds display:none style
