@@ -52,7 +52,7 @@ function main() {
     target.style.opacity = 0;
     anime({
       targets: target,
-      opacity: [{ value: 1, duration: 2000, easing: "easeInOutSine" }],
+      opacity: [{ value: 1, duration: 1000, easing: "easeInOutSine" }],
     });
   }
 
