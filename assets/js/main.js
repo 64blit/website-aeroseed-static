@@ -32,9 +32,9 @@ function main() {
   pageDict[contactNavButton.id] = contact;
 
   function resetAll() {
-    console.log(navDropDownButton.ariaExpanded);
     if (navDropDownButton.ariaExpanded === "true") {
-      navDropDownButton.click(); // close the nav drop down
+      // nav bar is expanded
+      navDropDownButton.click(); // closes the nav bar
     }
 
     for (let index = 0; index < pages.length; index++) {
@@ -48,12 +48,22 @@ function main() {
     }
   }
 
+  function animateTarget(target) {
+    target.style.opacity = 0;
+    anime({
+      targets: target,
+      opacity: [{ value: 1, duration: 2000, easing: "easeInOutSine" }],
+    });
+  }
+
   function clickHandler(event) {
     resetAll();
 
     const clickedElement = event.target;
     clickedElement.classList.add("active");
-    pageDict[clickedElement.id].classList.remove("d-none");
+    const page = pageDict[clickedElement.id];
+    page.classList.remove("d-none");
+    animateTarget(page);
   }
 
   homeNavButton.addEventListener("click", clickHandler);
@@ -62,6 +72,16 @@ function main() {
   aboutNavButton.addEventListener("click", clickHandler);
   partnersNavButton.addEventListener("click", clickHandler);
   contactNavButton.addEventListener("click", clickHandler);
+
+  function initialAnimation() {
+    home.style.opacity = 0;
+    anime({
+      targets: home,
+      opacity: [{ value: 1, delay: 3000, duration: 2000, easing: "easeInOutSine" }],
+    });
+  }
+
+  initialAnimation();
 }
 
 waitForDOM((callback = main));
