@@ -36,9 +36,13 @@ body {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 380px) {
     .content-wrapper {
         transform: scale(0.5);
+    }
+
+    .partners-wrapper {
+        padding-top: 37rem;
     }
 }
 
