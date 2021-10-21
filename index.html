@@ -1,66 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="The worlds first controllable monocopter.">
-        <meta name="author" content="Aeroseed LLC">
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="The worlds first controllable monocopter."/>
+        <meta name="author" content="Aeroseed LLC"/>
         <title>Aeroseed LLC</title>
-        <!-- Bootstrap core CSS -->
-        <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
-        <!-- Custom styles for this template -->
-        <link href="style.css" rel="stylesheet">
+        <link href="bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="blocks.css"/>
+        <link href="style.css" rel="stylesheet"/>
     </head>
     <body>
-        <video autoplay muted loop id="bg-video" class="overflow-hidden position-fixed" width="100%" autoplay="autoplay" loop muted>
-            <source src="assets/aeroseed.mp4" type="video/mp4">
-        </video>
-        <div class="d-flex flex-wrap justify-content-end me-lg-5 mt-1 " id="top-bar-container">
-            <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">HOME</div>
-            <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">ABOUT</div>
-            <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">PARTNERS</div>
-            <div class="btn btn-sm flex-fill mt-3 navigation-link text-center" type="button">CONTACT</div>
-        </div>
-        <div class="me-auto" id="top-left-logo"></div>
+        <nav class="navbar navbar-expand-lg navbar-light py-lg-1 text-uppercase" id="top-bar-container">
+            <div class="container">
+                <a class="border-0 navbar-brand" href="#" id="top-left-logo"></a>
+                <button class="bg-light navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown-3">
+                    <ul class="ms-auto navbar-nav">
+                        <li class="nav-item text-white">
+                            <a id="homeNavButton" class="active nav-link navigation-link p-md-4 px-lg-3 py-lg-4 text-white" aria-current="page" href="#home">HOME</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a id="specsNavButton" class="nav-link navigation-link p-md-4 px-lg-3 py-lg-4 text-white" href="#specifications">SPECIFICATIONS</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a id="aboutNavButton" class="nav-link navigation-link p-md-4 px-lg-3 py-lg-4 text-white" href="#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a id="partnersNavButton" class="nav-link navigation-link p-md-4 px-lg-3 py-lg-4 text-white" href="#partners">PARTNERS</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a id="contactNavButton" class="nav-link navigation-link p-md-4 px-lg-3 py-lg-4 text-white" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="align-items-center d-flex justify-content-center" id="main-page-container">
             <div id="body-wrapper" class="d-flex justify-content-center">
-                <div class="align-content-center align-items-center d-flex d-none flex-column justify-content-center m-1 p-3" id="home-text-wrapper">
-                    <div class="home-text lead text-center text-nowrap text-white" style="letter-spacing: 10px; text-indent: 10px;">THE WORLD'S</div>
-                    <div class="fw-bolder home-text text-center text-white" style="letter-spacing: 8px; text-indent: -4px; height: 7rem; text-align: center; font-size: 5rem; margin-top: -2rem; margin-bottom: -1rem; font-style: italic;">FIRST</div>
-                    <div class="home-text lead text-center text-white" style="letter-spacing: 2px; text-indent: -24px; font-size: 2rem;">CONTROLLABLE</div>
-                    <div class="home-text text-center text-white" style="text-indent: -1px; letter-spacing: 6px; font-size: 2.5rem; font-weight: bolder;">MONOCOPTER</div>
+                <div class="align-content-center align-items-center d-flex flex-column justify-content-center m-1 p-3" id="home">
+                    <section class="position-relative text-secondary">
+                        <div class="container pb-5 pt-5">
+                            <div class="pb-5 pt-5 row">
+                                <div class="col-lg-6 header-text-container octagon pb-5 pt-5">
+                                    <div class="display-1 fw-bold home-text smaller-header-text text-light text-nowrap">THE WORLD'S</div>
+                                    <div class="fst-italic fw-bolder larger-header-text ms-5 mt-n5 thick-text-shadow-1">FIRST</div>
+                                    <div class="medium-header-text pt-0 text-light thick-text-shadow-1">CONTROLLABLE</div>
+                                    <div class="medium-large-header-text mt-n5 text-light">MONOCOPTER</div>
+                                    <ul>
+                                        <div class="fw-bold h5 ms-n5 mt-5" id="home-header-text">A disruptive new aerial vehicle</div>
+                                        <li class="text-white">VTOL with only one motor</li>
+                                        <li class="text-white">Superior efficiency over multi-rotor/multi-motor aircraft</li>
+                                        <li class="text-white">Less than half the moving parts of all other rotorcrafts</li>
+                                        <li class="text-white">Low maintenance costs and increased MTBF</li>
+                                        <li class="text-white">Reduced audible noise, stealth at 100ft</li>
+                                        <li class="text-white">Safe descent by autorotation, slower than a parachute</li>
+                                    </ul>
+                                    <a id="homeLearnMoreButton" href="#" class="btn btn-light mt-3" id="header-learn-more-btn">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="align-content-center align-items-center d-flex flex-column justify-content-center m-1 p-3" id="about-wrapper">
-                    <div class="text-center text-white">MONOCOPTER</div>
+                <div class="align-content-center align-items-center d-flex d-none flex-column justify-content-center m-1 p-3" id="specifications">
+                    <div class="octagon">
+                        <div class="about-text-header fw-bolder p-3 text-white w-100">SPECIFICATIONS</div>
+                        <div class="about-text-blurb p-3 text-white">Coming soon....</div>
+                    </div>
                 </div>
-                <div class="align-content-around d-flex d-none flex-wrap" id="partners-wrapper">
-                    <div class="partner-logo-parent">
-                        <div class="octagon">
-                            <div class="lockheed-martin-logo m-1 partners-logo"></div>
+                <div class="align-content-center align-items-center d-flex d-none flex-column justify-content-center m-1 p-3" id="about">
+                    <div id="about-blurb-wrapper" class="octagon">
+                        <div class="h2 p-3 text-white w-100">About</div>
+                        <div class="about-text-blurb p-3 text-white">Observing the silent flight of a samara, or winged seed escaping its parents shadow is almost certainly a universal human experience. An encounter with one of Nature's helicopters probably inspired the first manifestation of mankind’s ideas of vertical flight. This most basic example of flight in Nature shed light onto greatly simplified flight control mechanisms and a pattern to increased aerodynamic performance in a Low Reynolds number environment. While many others look to the animal kingdom for solutions implemented by Nature, our mono-wing rotorcraft mimics a solution discovered in the plant kingdom and implemented on a highly maneuverable aircraft, the Roboseed. The advantages of this unique rotorcraft is inspired by winged seeds such as a maple seed, and is patented and exclusively licensed by the Inventor, a founder of Aeroseed.</div>
+                    </div>
+                </div>
+                <div class="align-content-center d-flex d-none justify-content-center" id="partners">
+                    <div class="align-content-center d-flex flex-wrap justify-content-evenly partners-wrapper">
+                        <div class="partner-logo-parent">
+                            <div class="h-100 octagon">
+                                <div class="lockheed-martin-logo m-1 partners-logo"></div>
+                            </div>
+                        </div>
+                        <div class="partner-logo-parent">
+                            <div class="h-100 octagon">
+                                <div class="csulb-logo m-1 partners-logo"></div>
+                            </div>
+                        </div>
+                        <div class="partner-logo-parent">
+                            <div class="h-100 octagon">
+                                <div class="m-1 partners-logo vorcat-logo"></div>
+                            </div>
+                        </div>
+                        <div class="partner-logo-parent">
+                            <div class="h-100 octagon">
+                                <div class="asterlabs-logo m-1 partners-logo"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="partner-logo-parent">
-                        <div class="octagon">
-                            <div class="csulb-logo m-1 partners-logo"></div>
-                        </div>
-                    </div>
-                    <div class="partner-logo-parent">
-                        <div class="octagon">
-                            <div class="m-1 partners-logo vorcat-logo"></div>
-                        </div>
-                    </div>
-                    <div class="partner-logo-parent">
-                        <div class="octagon">
-                            <div class="asterlabs-logo m-1 partners-logo"></div>
-                        </div>
+                </div>
+                <div class="align-content-center align-items-center d-flex d-none flex-column justify-content-center m-1 p-3" id="contact">
+                    <div id="contact-blurb-wrapper" class="octagon">
+                        <div class="fw-bolder h2 mb-5 mt-3 text-white w-100">CONTACT</div>
+                        <div class="text-white">For information contact:</div>
+                        <div class="p-3 text-white">Aeroseed, LLC</div>
+                        <a class="p-3 text-white" href="mailto:aeroseed.info@gmail.com">aeroseed.info@gmail.com</a>
                     </div>
                 </div>
             </div>
         </div>
-        <footer id="footer-container">
-</footer>
+        <footer id="footer-container" class="d-none"></footer>
+        <video autoplay muted loop id="bg-video-portrait" class="bg-video overflow-hidden position-fixed" width="100%" height="100%" autoplay="autoplay" loop muted>
+            <source src="assets/portrait_bg.mp4" type="video/mp4"/>
+        </video>
+        <video autoplay muted loop id="bg-video-landscape" class="bg-video overflow-hidden position-fixed" width="100%" height="100%" autoplay="autoplay" loop muted>
+            <source src="assets/landscape_bg.mp4" type="video/mp4"/>
+        </video>
         <script src="assets/js/popper.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

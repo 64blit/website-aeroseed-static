@@ -1,56 +1,80 @@
 body {
     overflow: hidden;
+    line-height: 1.5;
+}
+
+@media screen and (orientation:portrait) {
+    #bg-video-landscape {
+        display: none;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    #bg-video-portrait {
+        display: none;
+    }
 }
 
 #top-left-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 7rem;
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+    height: 4rem;
     width: calc(.1vw + 16rem);
     object-fit: contain;
     background-size: contain;
     background-position: center center;
     background-image: url('assets/roboseed_logo.png');
-    z-index: -10;
+
+    /* z-index: -10; */
     background-repeat: no-repeat;
 }
 
-#top-bar-container > .navigation-link {
-    width: 6rem;
-    min-width: 6rem;
-    align-self: center;
+.navigation-link {
     margin-right: 1rem;
     margin-left: 1rem;
-    color: #E75914;
-    font-weight: 900;
-    background-color: black;
+    font-weight: 400;
     border-bottom: 2px solid #ffffff;
+    text-align: end;
+    background-color: black;
+}
+
+.navigation-link:hover {
+    box-shadow: 1px 0px 100px rgba(100,100,100,.15);
+    border-radius: .2rem;
+    border: 4px;
+
+    /* font-weight:700; */
 }
 
 #top-bar-container {
+    width: 100%;
     min-height: 5rem;
-    float: right;
-    margin-left: 18rem;
+    height: 5rem;
+    z-index: 1;
+
+    /* float: right; */
+    /* margin-left: 18rem; */
+    background-color: black;
 }
 
 #main-page-container {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+
+    /* z-index: -1 */
     min-width: 100%;
     min-height: 100%;
 }
 
 #body-wrapper {
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - 20rem);
-
-    /* background-color: rgba(0, 0, 0, 0.54) */
+    min-width: 30rem;
 }
 
-#home-text-wrapper {
+#home {
     height: 100%;
     text-align: justify;
     text-justify: inter-word;
@@ -61,12 +85,6 @@ body {
     /* box-shadow: 8px 2px 155px #222222; */
 }
 
-#home-text-wrapper > .home-text {
-    min-width: calc(.1vw + 15rem);
-    font-size: 1.4rem;
-    margin-top: -1rem;
-}
-
 #top-bar-container > div:hover {
     /* background-color: rgba(.1, .1, .1, .2); */
     /* box-shadow: inset 2px 2px 11px #3d3d3d; */
@@ -74,7 +92,7 @@ body {
     color: white;
 }
 
-#bg-video {
+.bg-video {
     width: 100%;
     height: 100%;
     z-index: -100;
@@ -94,14 +112,6 @@ body {
     min-height: 5rem;
 }
 
-.partner-logo-parent {
-    width: 40%;
-    max-width: 20rem;
-    min-height: 10rem;
-    height: 15rem;
-    padding: 1rem;
-}
-
 .partners-logo {
     background-repeat: no-repeat;
     background-position: center center;
@@ -109,11 +119,12 @@ body {
     height: 100%;
 }
 
-#partners-wrapper {
+#partners {
     justify-content: space-evenly;
     align-content: center;
     padding: 3rem;
     width: 100%;
+    font-size: 1.8rem;
 }
 
 .csulb-logo {
@@ -139,11 +150,13 @@ body {
 
 .octagon {
     width: 100% ;
-    height: 100%;
+
+    /* height: 100% */
     background: black;
     position: relative;
     bottom: 0;
-    z-index: -10;
+
+    /* z-index: -10; */
     padding: 2rem;
     border-left-color: #f7f7f7;
 }
@@ -157,18 +170,110 @@ body {
     left: 0;
     border-top: 29px solid rgb(1, 1, 1);
     border-right: 29px solid rgba(0, 0, 0, 0);
-    z-index: -10;
+
+    /* z-index: -10; */
 }
 
-.octagon:hover {
-    content: "";
+.about-text-header {
+    font-size: 2em;
+}
+
+.about-text-blurb {
+    font-size: 1em;
+}
+
+#about-blurb-wrapper {
+    background-color: black;
+
+    /* max-height: 100% */
+    font-size: 1.3rem;
     width: 100%;
-    height: 0;
-    position: absolute;
-    bottom: -29px;
-    left: 0;
-    border-top: 29px solid rgb(0, 0, 0);
-    border-right: 29px solid rgba(0, 0, 0, 0);
-    z-index: -10;
-    box-shadow: 1px 1px 50px 50px;
+    max-width: 60rem;
+}
+
+#home-header-text {
+    color: #E55321;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+.thick-text-shadow-1 {
+    text-shadow: 0px 1px, 1px 0px, 1px 0px;
+    font-weight: 500;
+}
+
+.smaller-header-text {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.larger-header-text {
+    font-size: 9em;
+    line-height: 12rem;
+    color: #E55321;
+}
+
+.medium-header-text {
+    font-size: 4em;
+    margin-top: -4rem;
+    font-weight: 700;
+
+    /* transform: scale(.9) */
+}
+
+.medium-large-header-text {
+    font-size: 4em;
+    line-height: 7rem;
+
+    /* text-indent: 10% */
+    /* transform: scale(.9) */
+    font-weight: 900;
+}
+
+.header-text-container {
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.header-text-container > ul {
+    font-size: inherit;
+}
+
+.header-text-container > ul > li {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+#header-learn-more-btn {
+    border-radius: 0;
+    background-color: black;
+    color: white;
+}
+
+#contact {
+    width: 40rem;
+}
+
+.navigation-link.active {
+    background-color: rgba(34, 34, 34, 0.26);
+    color: #E55321 !important;
+}
+
+#partners > div > div.partner-logo-parent {
+    width: calc(5rem + 25%);
+    min-width: 12rem;
+    max-width: 76rem;
+    min-height: 12rem;
+    max-height: 76rem;
+    height: calc(5rem + 25%);
+}
+
+#partners > div > div.partner-logo-parent > .octagon {
+    padding: .4rem;
+}
+
+.partners-wrapper {
+    width: 75%;
+    height: 100%;
 }
