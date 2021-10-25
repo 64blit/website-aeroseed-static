@@ -167,7 +167,7 @@ body {
 }
 
 .csulb-logo {
-    background-image: url("assets/CSU-Longbeach_seal.svg_white.png");
+    background-image: url('assets/CSU-Longbeach_seal.svg');
 }
 
 .lockheed-martin-logo {
@@ -324,4 +324,8 @@ body {
 
 #navDropdownButton {
     background-color: #868686;
+}
+
+.maryland-uni-logo {
+    background-image: url('assets/University_of_Maryland_seal.svg');
 }
