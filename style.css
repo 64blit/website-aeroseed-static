@@ -76,6 +76,9 @@ body {
     box-shadow: 1px 0px 100px rgba(100, 100, 100, 0.15);
     border-radius: 0.2rem;
     border: 4px;
+    border-bottom: 2px solid #595959;
+    color: #e55321;
+    transition: border .5s, border-botton .5s, border-radius .5s, color .25s;
 
     /* font-weight:700; */
 }
@@ -188,13 +191,9 @@ body {
 }
 
 .octagon {
-    /* width: 100% */
-    /* height: 100% */
     background: #212121;
     position: relative;
     bottom: 0;
-
-    /* z-index: -10 */
     padding: 2rem;
     border-left-color: #f7f7f7;
 }
@@ -283,12 +282,20 @@ body {
 .header-text-container > ul > li {
     font-size: 1.3em;
     text-align: left;
+    margin-left: 3rem;
 }
 
-#header-learn-more-btn {
+#homeLearnMoreButton {
+    transition: background-color .5s, border-radius .5s;
     border-radius: 0;
     background-color: black;
     color: white;
+}
+
+#homeLearnMoreButton:hover {
+    border-radius: .5rem;
+    transition: background-color 1s, border-radius 1s;
+    background-color: rgb(55, 55, 55);
 }
 
 #contact {
@@ -298,22 +305,20 @@ body {
 .navigation-link.active {
     background-color: rgba(34, 34, 34, 0.26);
     color: #e55321 !important;
+    transition: color 1s;
 }
 
 #partners > div > div.partner-logo-parent {
-    /* width: calc(5rem + 25%) */
-    min-width: 12rem;
-    max-width: 76rem;
-
-    /* min-height: 12rem */
-    max-height: 76rem;
-    height: calc(5rem + 25%);
+    display: block;
+    width: 25vh;
+    height: 25vh;
 }
 
 #partners > div > div.partner-logo-parent > .octagon {
     padding: 0.4rem;
-    height: 25%;
-    min-height: 20rem;
+    width: 100%;
+    height: 100%;
+    margin: .1rem;
 }
 
 .partners-wrapper {
@@ -324,6 +329,11 @@ body {
 
 #navDropdownButton {
     background-color: #868686;
+}
+
+#navDropdownButton:hover {
+    background-color: #f2f2f2;
+    transition: background-color .5s;
 }
 
 .maryland-uni-logo {
