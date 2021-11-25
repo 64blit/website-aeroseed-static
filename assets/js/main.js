@@ -77,11 +77,11 @@ function main() {
     home.style.opacity = 0;
     anime({
       targets: home,
-      opacity: [{ value: 1, delay: 3000, duration: 2000, easing: "easeInOutSine" }],
+      opacity: [{ value: 1, delay: 1000, duration: 2000, easing: "easeInOutSine" }],
     });
   }
 
   initialAnimation();
 }
 
-waitForDOM((callback = main));
+waitForDOM(main);
