@@ -217,6 +217,8 @@ body {
 
 .about-text-blurb {
     font-size: 1rem;
+    padding-right: 5rem;
+    padding-left: 3rem;
 }
 
 #about-blurb-wrapper {
@@ -338,5 +340,5 @@ body {
 }
 
 .team-member-container {
-    min-height: 3rem;
+    width: 14rem;
 }
